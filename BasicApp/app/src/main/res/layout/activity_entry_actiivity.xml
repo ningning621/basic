@@ -1,0 +1,148 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#e8edf4"
+    android:padding="25dp" >
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="5dp" >
+
+         <TextView
+             android:id="@+id/dateLabel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Date: "
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <TextView
+             android:id="@+id/Edate"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="5dp" >
+
+         <TextView
+             android:id="@+id/textLabel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Text: "
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <TextView
+             android:id="@+id/Etext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="10dp"
+         android:layout_marginLeft="5dp" >
+
+         <TextView
+             android:id="@+id/ratingLabel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Rating: "
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+         <TextView
+             android:id="@+id/Erating"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textAppearance="?android:attr/textAppearanceLarge" />
+     </LinearLayout>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="Delete Entry"
+        android:background="#ffc5b9"
+        android:textColor="#fbfbfb"
+        android:onClick="delete"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp" >
+
+        <TextView
+            android:id="@+id/textEditLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text: "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/textEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:ems="10" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp" >
+
+        <TextView
+            android:id="@+id/ratingEditLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating: "
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/ratingEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:ems="10" >
+        </EditText>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Update Entry"
+        android:background="#ffc5b9"
+        android:textColor="#fbfbfb"
+        android:onClick="update"/>
+
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:text="Close"
+        android:layout_marginTop="10dp"
+        android:background="#ffc5b9"
+        android:textColor="#fbfbfb"
+        android:id="@+id/close" />
+
+</LinearLayout>

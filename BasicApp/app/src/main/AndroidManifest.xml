@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ningning.basicapp" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".LoginPage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+   <!--     <activity
+            android:name=".HomePage"
+            android:label="@string/title_activity_home_page" >
+            <intent-filter>
+                <action android:name="com.example.action.HOMEPAGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+      <!--  <activity
+            android:name=".CreateEntry"
+            android:label="@string/title_activity_create_entry" >
+        </activity>
+        <activity
+            android:name=".Test"
+            android:label="@string/title_activity_test" >
+        </activity>-->
+        <activity
+            android:name=".EntryMenu"
+            android:label="@string/title_activity_entry_menu" >
+        </activity>
+        <activity
+            android:name=".TextInput"
+            android:label="@string/title_activity_text_input" >
+        </activity>
+  <!--      <activity
+            android:name=".PreviewText"
+            android:label="@string/title_activity_preview_text" >
+            <intent-filter>
+                <action android:name="com.example.ningning.basicapp.PREVIEW_TEXT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>-->
+        <activity
+            android:name=".NotEmptyHomePage"
+            android:label="@string/title_activity_not_empty_home_page" >
+        </activity>
+        <activity
+            android:name=".PictureInput"
+            android:label="@string/title_activity_picture_input" >
+        </activity>
+        <activity
+            android:name=".RatingInput"
+            android:label="@string/title_activity_rating_input" >
+        </activity>
+        <activity
+            android:name=".SelectedEntry"
+            android:label="@string/title_activity_selected_entry" >
+        </activity>
+        <activity
+            android:name=".EntryActiivity"
+            android:label="@string/title_activity_entry_actiivity" >
+        </activity>
+    </application>
+
+</manifest>

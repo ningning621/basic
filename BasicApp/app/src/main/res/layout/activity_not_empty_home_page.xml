@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="0dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c2d2cf"
+    android:id="@+id/row_layout"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/imageView2"
+            android:src="@drawable/plus_sign"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="right"
+            />
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/btnAdd"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_gravity="right"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGetAll"
+            android:background="#ffc5b9"
+            android:textColor="#fbfbfb"
+            android:layout_marginTop="16dp"
+            android:text="Refresh"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="left"
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Remember to refresh the page after every action!"
+        android:id="@+id/textView3"
+        android:textSize="30sp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+
+        />
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        >
+    </ListView>
+
+</LinearLayout>

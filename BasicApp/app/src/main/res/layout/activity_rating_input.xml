@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.ningning.basicapp.RatingInput">
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/back5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/arrow_left"
+        />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/back12"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ratings"
+        android:id="@+id/title"
+        android:textSize="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="48dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Happiness Level"
+        android:id="@+id/textView"
+        android:layout_below="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hours of Exercise"
+        android:id="@+id/exercise1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="350dp"
+         />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/eTexercise"
+        android:layout_alignBottom="@+id/exercise1"
+        android:layout_toRightOf="@+id/exercise1"
+        android:layout_toEndOf="@+id/exercise1"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Hours of Sleep"
+        android:id="@+id/sleep"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="250dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/eTsleep"
+        android:layout_alignBottom="@+id/sleep"
+        android:layout_toRightOf="@+id/sleep"
+        android:layout_toEndOf="@+id/sleep"
+        android:layout_marginLeft="30dp"
+         />
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/sub"
+        android:background="#ffc5b9"
+        android:textColor="#fbfbfb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="436dp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/eTLevel"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/exercise1"
+        android:layout_toEndOf="@+id/exercise1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
+
+</RelativeLayout>
