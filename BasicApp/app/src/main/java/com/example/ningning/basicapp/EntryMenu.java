@@ -27,12 +27,8 @@ public class EntryMenu extends Activity {
     TextView mTitle;
     Button toTextInput;
     Button toBack;
-    Button toPictureInput;
     Button toRatingInput;
-    Entries newEntry;
-    EntryRepo repo;
 
-    DBHelper db = new DBHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

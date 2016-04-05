@@ -69,12 +69,15 @@
 
     <Button
         android:id="@+id/delete"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginBottom="30dp"
         android:text="Delete Entry"
         android:background="#ffc5b9"
         android:textColor="#fbfbfb"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
         android:onClick="delete"/>
 
 
@@ -87,18 +90,19 @@
 
         <TextView
             android:id="@+id/textEditLabel"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
             android:layout_height="wrap_content"
             android:text="Text: "
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
             android:id="@+id/textEdit"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".7"
             android:layout_height="wrap_content"
             android:inputType="textMultiLine"
             android:layout_marginLeft="5dp"
-            android:layout_weight="1"
             android:ems="10" >
         </EditText>
     </LinearLayout>
@@ -111,36 +115,43 @@
 
         <TextView
             android:id="@+id/ratingEditLabel"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight=".3"
             android:layout_height="wrap_content"
             android:text="Rating: "
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
             android:id="@+id/ratingEdit"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_weight="1"
+            android:layout_weight=".7"
             android:ems="10" >
         </EditText>
     </LinearLayout>
 
     <Button
         android:id="@+id/update"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Update Entry"
         android:background="#ffc5b9"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:padding="10dp"
         android:textColor="#fbfbfb"
         android:onClick="update"/>
 
 
     <Button
-        android:layout_width="60dp"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_height="wrap_content"
         android:text="Close"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
         android:background="#ffc5b9"
         android:textColor="#fbfbfb"
         android:id="@+id/close" />

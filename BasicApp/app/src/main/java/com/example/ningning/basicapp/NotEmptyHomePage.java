@@ -34,15 +34,9 @@ import android.widget.Toast;
 public class NotEmptyHomePage extends ListActivity implements View.OnClickListener {
     Button add, getAll;
     TextView entry_id;
-    private static final String TAG = NotEmptyHomePage.class.getSimpleName();
-    Entries toAdd = new Entries();
-    ContentValues value = new ContentValues();
-    List<Entries> list;
-    DBHelper db = new DBHelper(this);
-    ArrayAdapter <String> myAdapter;
-    Text txt = new Text();
     TextView instructions;
     Button b;
+    ListView listView;
 
     //once the add button is pressed, the user goes to the EntryMenu.class so that they can add their entries
     @Override
@@ -56,37 +50,6 @@ public class NotEmptyHomePage extends ListActivity implements View.OnClickListen
             intent.putExtra("entry_id",0);
 
             startActivity(intent);
-
-
-        }else {
-            //declare and instantiates an EntryRepo object that is a class that was previously made that has methods for the database
-            EntryRepo repo = new EntryRepo(this);
-
-            //this creates a collection of strings that contains entries
-            ArrayList<HashMap<String, String>> entriesList =  repo.getEntriesList();
-
-            if(entriesList.size()!=0) {
-                ListView lv = getListView();
-                //once entries are made by the user
-                lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-                        entry_id = (TextView) view.findViewById(R.id.entry_Id);
-                        String entryId = entry_id.getText().toString();
-                        Intent objIndent = new Intent(getApplicationContext(),EntryActiivity.class);
-                        // it sends the entry_id to the EntryActiviity.class and converts the entry_id into an Integer
-                        objIndent.putExtra("entry_id", Integer.parseInt(entryId));
-                        startActivity(objIndent);
-                    }
-                });
-                //used to display listView of Entries
-                ListAdapter adapter = new SimpleAdapter( NotEmptyHomePage.this,entriesList,
-                        R.layout.view_entry_info, new String[] { "id","date"},
-                        new int[] {R.id.entry_Id, R.id.entry_date});
-                setListAdapter(adapter);
-            }else{
-                Toast.makeText(this, "No entry!", Toast.LENGTH_SHORT).show();
-            }
 
         }
     }
@@ -108,6 +71,37 @@ public class NotEmptyHomePage extends ListActivity implements View.OnClickListen
 
         b = (Button)findViewById(R.id.btnGetAll);
         b.setTypeface(francois);
+
+        //declare and instantiates an EntryRepo object that is a class that was previously made that has methods for the database
+        EntryRepo repo = new EntryRepo(this);
+
+        //this creates a collection of strings that contains entries
+        ArrayList<HashMap<String, String>> entriesList =  repo.getEntriesList();
+
+        if(entriesList.size()!=0) {
+            ListView lv = getListView();
+            //once entries are made by the user
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
+                    entry_id = (TextView) view.findViewById(R.id.entry_Id);
+                    String entryId = entry_id.getText().toString();
+                    Intent objIndent = new Intent(getApplicationContext(),EntryActiivity.class);
+                    // it sends the entry_id to the EntryActiviity.class and converts the entry_id into an Integer
+                    objIndent.putExtra("entry_id", Integer.parseInt(entryId));
+                    startActivity(objIndent);
+                }
+            });
+            //used to display listView of Entries
+            ListAdapter adapter = new SimpleAdapter( NotEmptyHomePage.this,entriesList,
+                    R.layout.view_entry_info, new String[] { "id","date"},
+                    new int[] {R.id.entry_Id, R.id.entry_date});
+            setListAdapter(adapter);
+        }else{
+            Toast.makeText(this, "No entry!", Toast.LENGTH_SHORT).show();
+            listView = (ListView)findViewById(android.R.id.list);
+            listView.setVisibility(View.GONE);
+        }
 
 
     }
