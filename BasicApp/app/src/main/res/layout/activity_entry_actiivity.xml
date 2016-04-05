@@ -1,10 +1,14 @@
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#e8edf4"
+    >
+<LinearLayout
     android:orientation="vertical"
     android:background="#e8edf4"
-    android:padding="25dp" >
+    android:padding="25dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
      <LinearLayout
          android:layout_width="match_parent"
@@ -73,6 +77,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
         android:text="Delete Entry"
         android:background="#ffc5b9"
         android:textColor="#fbfbfb"
@@ -140,6 +145,7 @@
         android:layout_gravity="center_horizontal"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:padding="10dp"
+        android:layout_marginTop="30dp"
         android:textColor="#fbfbfb"
         android:onClick="update"/>
 
@@ -157,3 +163,4 @@
         android:id="@+id/close" />
 
 </LinearLayout>
+    </ScrollView>

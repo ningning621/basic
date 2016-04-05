@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:textSize="90sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Basics"
+        android:text="Basic"
         android:id="@+id/loginName"
         android:layout_marginTop="120dp"
         android:textColor="#fbfbfb"

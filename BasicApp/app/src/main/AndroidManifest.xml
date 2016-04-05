@@ -58,10 +58,6 @@
             android:label="@string/title_activity_not_empty_home_page" >
         </activity>
         <activity
-            android:name=".PictureInput"
-            android:label="@string/title_activity_picture_input" >
-        </activity>
-        <activity
             android:name=".RatingInput"
             android:label="@string/title_activity_rating_input" >
         </activity>
